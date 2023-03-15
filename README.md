@@ -1,6 +1,6 @@
-# BlackJack 
+# Blackjack 
 
-This is a simple BlackJack game built with React.
+This is a simple Blackjack game built with React.
 
 
 ## Getting Started
