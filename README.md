@@ -13,7 +13,7 @@ Then navigate into the project directory and install the necessary dependencies:
 
     npm install
 
-Finally, start the development server:
+Finally, start the development server by opening a terminal inside VS Code:
 
     npm start
 
