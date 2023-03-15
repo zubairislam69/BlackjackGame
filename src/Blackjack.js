@@ -4,10 +4,6 @@ import "./Blackjack.css"
 
 function Blackjack() {
 
-
-    //ISSUE: 
-    // When stand is clicked, and dealer deals an Ace, it stops dealing
-
     const [player, setPlayer] = useState({
         cards: [],
         sum: 0
@@ -57,8 +53,8 @@ function Blackjack() {
             if (sum + 11 < 21) return 11
 
             else if (sum + 11 > 21) return 1
-                
-            else return 11 
+
+            else return 11
         }
         else return card
     }
@@ -74,30 +70,30 @@ function Blackjack() {
                 startBtn: true
             }))
 
-                setTimeout(function () {
-                    setPlayer(prevState => ({
-                        cards: [...prevState.cards, firstCard],
-                        sum: prevState.sum + cardConditions(firstCard, prevState.sum)
-                    }))
-                }, 100)
+            setTimeout(function () {
+                setPlayer(prevState => ({
+                    cards: [...prevState.cards, firstCard],
+                    sum: prevState.sum + cardConditions(firstCard, prevState.sum)
+                }))
+            }, 100)
 
-                setTimeout(function () {
-                    setDealer(prevState => ({
-                        cards: [...prevState.cards, dealerCard],
-                        sum: prevState.sum + cardConditions(dealerCard, prevState.sum)
-                    }))
-                }, 500)
+            setTimeout(function () {
+                setDealer(prevState => ({
+                    cards: [...prevState.cards, dealerCard],
+                    sum: prevState.sum + cardConditions(dealerCard, prevState.sum)
+                }))
+            }, 500)
 
-                setTimeout(function () {
-                    setPlayer(prevState => ({
-                        cards: [...prevState.cards, secondCard],
-                        sum: prevState.sum + cardConditions(secondCard, prevState.sum)
-                    }))
-                }, 1000)
+            setTimeout(function () {
+                setPlayer(prevState => ({
+                    cards: [...prevState.cards, secondCard],
+                    sum: prevState.sum + cardConditions(secondCard, prevState.sum)
+                }))
+            }, 1000)
 
-                setTimeout(function () {
-                    setFlippedCard(true)
-                }, 1500)
+            setTimeout(function () {
+                setFlippedCard(true)
+            }, 1500)
 
             setBalance(prevState => prevState - bet)
 
@@ -120,7 +116,7 @@ function Blackjack() {
     // if player sum + ace > 21, set ace = 1
     // else if player sum + ace < 21, set ace = 11
 
-    
+
 
     function hitGame() {
 
@@ -218,7 +214,7 @@ function Blackjack() {
             standBtn: true
 
         }))
-        
+
         newCard = getNewCard()
 
         setFlippedCard(false)
@@ -236,7 +232,7 @@ function Blackjack() {
                     }))
 
                     trackDealerSum += cardConditions(newCard, trackDealerSum)
-                    
+
                 }
                 else return
             }, 500 * i)
@@ -314,7 +310,7 @@ function Blackjack() {
             splitBtn2: true,
             standSplitBtn: false
         }))
-        console.clear() 
+        console.clear()
 
         startGame()
     }
