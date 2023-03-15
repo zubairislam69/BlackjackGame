@@ -1,11 +1,11 @@
-#Blackjack Game
+# Blackjack Game
 
 Developed By Zubair Islam
 
 This is a simple blackjack game built with React.
 
 
-##Getting Started
+## Getting Started
 
 To run this project, first clone the repository to your local machine:
     git clone https://github.com/your-username/blackjack.git
