@@ -1,6 +1,4 @@
-# Blackjack Game
-
-Developed By Zubair Islam
+# BlackJack 
 
 This is a simple blackjack game built with React.
 
