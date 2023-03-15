@@ -42,7 +42,6 @@ function Blackjack() {
     function getNewCard() {
         let allCards = ["A", 2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K"]
         let randomNumber = (Math.floor(Math.random() * 13))
-        // return 10
         return allCards[randomNumber]
     }
 
@@ -111,13 +110,6 @@ function Blackjack() {
 
     }
 
-    // Figure out how to set up Ace as 1 or 11
-
-    // if player sum + ace > 21, set ace = 1
-    // else if player sum + ace < 21, set ace = 11
-
-
-
     function hitGame() {
 
         newCard = getNewCard()
@@ -131,11 +123,6 @@ function Blackjack() {
             setPlayer(prevState => ({
                 cards: [...prevState.cards, newCard],
                 sum: prevState.sum + cardConditions(newCard, prevState.sum)
-                // sum: (prevState.sum + newCard > 21 &&
-                //     prevState.cards.includes("A") ?
-
-                //     prevState.sum + cardConditions(newCard, prevState.sum))
-
             }))
 
 
@@ -198,13 +185,6 @@ function Blackjack() {
             }
         }
     }
-
-    // const playerWin = ((dealerSum > 21 && dealerSum > playerSum) ||
-    //     (dealerSum >= 17 && playerSum > dealerSum && playerSum <= 21) ||
-    //     (playerSum === 21))
-
-    // const dealerWin = ((dealerSum >= 17 && dealerSum <= 21 && dealerSum > playerSum) ||
-    //     (playerSum > 21))
 
     function standGame() {
 
@@ -416,13 +396,6 @@ function Blackjack() {
                     (buttons.standBtn && playerRules()) || player.sum === 21 ?
                         balance + (bet * 2) : balance
                 }
-
-                { // SET this up for split bets
-                /* {
-                    (standBtn && playerRules()) || playerSum === 21 ?
-                        (balance + (bet * 2)) : balance
-                } */}
-
             </p>
 
             {!buttons.startBtn &&
