@@ -6,6 +6,7 @@ This is a simple blackjack game built with React.
 ## Getting Started
 
 To run this project, first clone the repository to your local machine:
+
     git clone https://github.com/zubairislam69/BlackjackGame.git
 
 Then navigate into the project directory and install the necessary dependencies:
